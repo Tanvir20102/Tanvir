@@ -1,0 +1,447 @@
+/* =========================================================== Font import links ============================================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ============================================================== Root styling ================================================================================= */
+:root {
+    --headingColor: #45ab60;
+    --textColor: #757373d4;
+    --navText: #80eb95;
+    --headingFont: "Bodoni Moda", serif;
+    --paraFont: font-family: "Jost", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::selection {
+    background-color: #45ab6066;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ================================================================ Header =================================================================================== */
+header {
+    height: 90vh;
+    width: 100%;
+    background-image: url("./img/man-hugs-his-wife-they-smile-each-other\ 2.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+header nav {
+    height: 16%;
+    width: 100%;
+    /* border-bottom: 1px rgba(255, 255, 255, 0.486) solid; */
+    background-color: rgba(41, 41, 41, 0.421);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0px 0px 50px rgba(160, 160, 160, 0.258);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header nav .nav-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+}
+
+header nav .nav-container .company-logo {
+    height: 100%;
+    width: auto;
+    /* border: 2px white solid; */
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+header nav .nav-container .nav-links-container {
+    height: 100%;
+    width: 30%;
+    /* border: 2px red solid; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header nav .nav-container .nav-links-container ul {
+    display: inline-flex;
+    gap: 7vw;
+}
+
+header nav .nav-container .nav-links-container ul a {
+    text-decoration: none;
+    color: var(--navText);
+    font-size: 20px;
+}
+
+header nav .nav-container .nav-links-container ul a li {
+    list-style-type: none;
+}
+
+header nav .nav-container .nav-links-container ul a li i {
+    font-size: 23px;
+}
+
+header .quote-container {
+    height: 84%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1vw;
+}
+
+header .quote-container .quote {
+    height: auto;
+    width: auto;
+}
+
+header .quote-container .quote h1 {
+    font-size: 5vw;
+    color: rgb(237 228 255);
+    /* color: rgb(2, 2, 43); */
+    font-family: var(--headingFont);
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 6vw;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    text-shadow: 1px 2px 15px rgba(0, 0, 0, 0.279);
+}
+
+header .quote-container .quote h1:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(181, 236, 205, 0.725);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: blur(50px);
+}
+
+/* =================================================================== header responsive =========================================================================== */
+@media only screen and (max-width: 894px) {
+    header .quote-container .quote h1 {
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 598px) {
+    header nav .nav-container .nav-links-container {
+        width: 50%;
+    }
+
+    header nav {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    header nav .nav-container .nav-links-container ul a {
+        font-size: 18px;
+    }
+
+    header .quote-container .quote h1 {
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+}
+
+@media only screen and (max-width: 441px) {
+    header .quote-container .quote h1 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    header nav .nav-container .company-logo img {
+        height: 40%;
+        width: auto;
+    }
+
+    header nav .nav-container .nav-links-container ul a {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 294px) {
+    header nav .nav-container .nav-links-container {
+        width: auto;
+    }
+}
+
+/* =================================================================== Contact section =========================================================================== */
+.contact-section {
+    height: 100vh;
+    width: 100%;
+    padding-top: 5vh !important;
+    /* border: 2px black solid; */
+    background-color: #f0f0f0;
+}
+
+.contact-section .contact-wrapper {
+    height: 100%;
+    width: 100%;
+    /* border: 2px red solid; */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contact-section .contact-wrapper .contact-text {
+    height: 100%;
+    width: 50%;
+    /* border: 2px black solid; */
+    padding: 8vh 2vw;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10vh; */
+    justify-content: space-around;
+}
+
+.contact-section .contact-wrapper .contact-text .heading {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-section .contact-wrapper .contact-text h1 {
+    font-size: 43px;
+    color: var(--headingColor);
+    font-weight: 500;
+    line-height: 55px;
+    white-space: normal !important;
+}
+
+.contact-section .contact-wrapper .contact-text .para {
+    height: auto;
+    width: auto;
+}
+
+.contact-section .contact-wrapper .contact-text .para p {
+    font-family: var(--paraFont);
+    font-optical-sizing: auto;
+    font-size: 20px;
+    color: #626262;
+    text-align: right;
+}
+
+.contact-section .contact-wrapper .form {
+    height: 100%;
+    width: 45%;
+    /* border: 2px black solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section .contact-wrapper .form form {
+    width: 80%;
+    height: 80%;
+    /* border: 2px black solid; */
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 1vw;
+    gap: 3vh;
+    
+}
+
+.contact-section .contact-wrapper .form form input {
+    width: 100%;
+    padding: 1.2vh 1vw;
+    font-size: 20px;
+    font-family: var(--paraFont);
+    outline: none;
+    /* border: 1px rgba(203, 201, 201, 0.599) solid; */
+    box-shadow: 1px 2px 15px #94949472,
+    inset -1px -2px 15px #94949472;
+    border: none;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 20;
+}
+
+.contact-section .contact-wrapper .form form input::placeholder {
+    color: var(--textColor);
+}
+
+.contact-section .contact-wrapper .form form textarea {
+    width: 100%;
+    resize: none;
+    height: 30vh;
+    padding: 1.2vh 1vw;
+    font-size: 20px;
+    font-family: var(--paraFont);
+    outline: none;
+    /* border: 1px rgba(203, 201, 201, 0.599) solid; */
+    box-shadow: 1px 2px 15px #94949472,
+    inset -1px -2px 15px #94949472;
+    border: none;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 20;
+}
+
+.contact-section .contact-wrapper .form form .submitBtn {
+    padding: 1.5vh 1vw;
+    font-size: 22px;
+    font-family: var(--paraFont);
+    border-radius: 50px;
+    outline: none;
+    border: 1px var(--headingColor) solid;
+    color: var(--headingColor);
+    font-weight: 500;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.contact-section .contact-wrapper .form form .submitBtn::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--headingColor);
+    left: 0;
+    bottom: -100%;
+    border-radius: 100%;
+    z-index: -1;
+    transition: 0.3s ease;
+}
+
+.contact-section .contact-wrapper .form form .submitBtn:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.contact-section .contact-wrapper .form form .submitBtn:hover {
+    color: white;
+}
+
+/* ============================================================= Reaponsive contact ============================================================================= */
+
+
+@media only screen and (max-width: 1107px) {
+    
+    .contact-section .contact-wrapper .contact-text h1 {
+        font-size: 40px;
+        text-wrap: wrap;
+    }
+    
+    .contact-section .contact-wrapper .contact-text .para p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1038px) {
+    .contact-section .contact-wrapper .contact-text {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 934px) {
+    .contact-section {
+        min-height: 150vh;
+    }
+    
+    .contact-section .contact-wrapper {
+        flex-direction: column;
+    }
+    
+    .contact-section .contact-wrapper .contact-text {
+        width: 100%;
+    }
+    
+    .contact-section .contact-wrapper .form {
+        width: 100%;
+    }
+    
+    .contact-section .contact-wrapper .form form {
+        width: 70%;
+        height: 100%;
+        justify-content: center;
+    }
+    
+    .contact-section .contact-wrapper .contact-text {
+        padding: 2vh 5vw;
+    }
+    .contact-section .contact-wrapper .contact-text .para {
+        width: 70%;
+        align-self: flex-end;
+    }
+
+}
+
+@media only screen and (max-width: 603px) {
+    .contact-section .contact-wrapper .form form {
+        width: 90%;
+    }
+
+    .contact-section .contact-wrapper .contact-text .para {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 549px) {
+    .contact-section .contact-wrapper .form form {
+        width: 90%;
+    }
+
+    .contact-section .contact-wrapper .contact-text .para {
+        width: 90%;
+    }
+
+    .contact-section .contact-wrapper .contact-text h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .contact-section .contact-wrapper .contact-text .para p {
+        font-size: 17px;
+        text-align: left;
+    }
+
+    .contact-section .contact-wrapper .contact-text .para {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 432px) {
+    .contact-section .contact-wrapper .contact-text h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+    .contact-section .contact-wrapper .contact-text h1 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    
+    .contact-section .contact-wrapper .contact-text .para p {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 278px) {
+    .contact-section {
+        min-height: 160vh;
+    }
+}
